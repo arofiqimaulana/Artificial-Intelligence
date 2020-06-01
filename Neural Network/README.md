@@ -43,10 +43,12 @@ Kadangkala keputusan tidak bisa diambul secara 1 kali kondisi saja (butuh patter
 ### Mengapa perlu Fungsi Aktivasi ?
 Fungsi aktivasi seolah-olah adalah pattern yang sudah ditemukan untuk membedakan apakah ini A atau B (layaknya hyperplane di SVM). 
 
-### Mengapa ada banyak fungsi aktivasi ?
-Terdapat beberapa fungsi aktivasi seperti sigmoid, ReLu, Leaky ReLu, MaxOut, ELU. Jika pattern sangat sederhana maka hyperlane akan seperti garis lurus (ingat SVM). Karena pattern tiap data berbeda, maka pemisah garis lurus tidak bisa lagi digunakan, sehingga butuh pemisah yang flexibel sesuai dengan pattern yang ditemukan. Ingat bahwa seperti 
+Fungsi Aktivasi ini mirip dengan Fungsi kepekatan peluang. Perlu diingat bahwa fungsi peluang untuk regresi logistik berbentuk sigmoid (woww... lihat kedekatannya).
 
-Perlu diingat bahwa fungsi peluang untuk regresi logistik berbentuk sigmoid (woww... lihat kedekatannya). ReLu tidak mengakomodir nilai negatif, sehingga hati-hati menggunakannya jika kita punya data bernilai negatif.
+### Mengapa ada banyak fungsi aktivasi ?
+Terdapat beberapa fungsi aktivasi seperti sigmoid, ReLu, Leaky ReLu, MaxOut, ELU. Jika pattern sangat sederhana maka hyperlane akan seperti garis lurus (ingat SVM). Karena pattern tiap data berbeda, maka pemisah garis lurus tidak bisa lagi digunakan, sehingga butuh pemisah yang flexibel sesuai dengan pattern yang ditemukan. 
+
+Salah satu cara pemilihan fungsi adalah bahwa ReLu tidak mengakomodir nilai negatif, sehingga hati-hati menggunakannya jika kita punya data bernilai negatif.
 
 # Convolutional Neural Network (CNN)
 Secara prinsip, algoritma ini meniru visual cortex pada mamalia. Algoritma ini seolah-olah **mengambil bagian** yang penting-penting saja, misal wajah manusia akan dibagi menjadi beberapa titik fokus seperti hidung, telinga, mata, dan bibir. Sedangkan bagian selain tersebut tidak diambil.
