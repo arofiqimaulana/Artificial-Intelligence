@@ -1,4 +1,4 @@
-# Artificial Neural Network (ANN)
+# 1. Artificial Neural Network (ANN)
 Neural network merupakan salah satu bagian dari algortima machine learning. Algoritma ini terinspirasi dari cara kerja otak manusia. 
 
 ### Konsep Dasar
@@ -50,7 +50,7 @@ Terdapat beberapa fungsi aktivasi seperti sigmoid, ReLu, Leaky ReLu, MaxOut, dan
 
 Salah satu cara pemilihan fungsi adalah bahwa ReLu tidak mengakomodir nilai negatif, sehingga hati-hati menggunakannya jika kita punya data bernilai negatif.
 
-# Convolutional Neural Network (CNN)
+# 2. Convolutional Neural Network (CNN)
 Secara prinsip, algoritma ini meniru visual cortex pada mamalia. Algoritma ini seolah-olah **mengambil bagian** yang penting-penting saja, misal wajah manusia akan dibagi menjadi beberapa titik fokus seperti hidung, telinga, mata, dan bibir. Sedangkan bagian selain tersebut tidak diambil.
 
 Pengenalan pola pada suatu gambar kadangkala bisa dilihat dengan mengamati beberapa bagian saja. Hal ini mengakibatkan ukuran matriks akan berkurang sehingga tidak semua input akan dihubungkan ke layer. Hal ini tentunya akan mengurangi komputasi sehingga perhitungan menjadi lebih cepat. Oleh karena itulah, CNN sering dipakai/cocok digunakan untuk kasus **Computer Vision**.
@@ -61,6 +61,34 @@ Salah satu perbedaan ANN dan CNN adalah pada CNN tidak semua input dipasangkan d
 merupakan proses untuk **mengurangi resolusi gambar** dengan tetap mempertahankan informasi pada gambar (ibarat PCA).
 
 
-# Recurrent Neural Network (RNN)
+# 3. Recurrent Neural Network (RNN)
 merupakan arsitektur deep learning yang populer serta sangat menjanjikan untuk menyelesaikan berbagai persolan yang terkait **NLP (Natural Language Processing)**. Intinya RNN digunakan agar mesin dapat memahami bahasa manusia meskipun sebenarnya dapat diimplementasikan untuk menenali gambar atau objek.
+
+# 4. Long Term Short Term Memory (LSTM)/GRU Networks
+LSTM dan GRU (Gated Recurrernt Unit) merupakan building unit untuk layer-layer pada recurrent neural network (RNN). LTSM juga banyak diimplementasikan pada bidang NLP. Bisa dibilang bahwa LSTM dan GRU merupakan pengembangan dari RNN
+
+# 5. Deep Belief Networks (DBN)
+merupakan model deep learning yang memanfaatkan tumpukan/stack Restrcited Boltzmann Machines (RBM) atau kadangkala Autoencoders. Autoencoders adalah model neural network yang memiliki input dan output sama. Autoencoder mempelajari data input dan berusaha untuk melakukan rekonstruksi terhdapat data input tersebut.
+
+DBN terdiri dari atas multiple layers dari latent variabeles (hidden units), dimana masing-masing RBM layers saling terhubung, namun node intra RB, layer tidak saling terhubung dengan node intra RBM lainnya.
+
+DBN banyak diimplementasikan pada kasus-kasus yang memerlukan classification dan pengenalan image/gambar.
+
+# 6. Deep Stacking Networks (DSN)
+Salah satu masalah pada deep learning adalah proses learning sangat sulit dilakukan dan memerlukan komputasi yang cukup kompleks. Secara umum, model DSN terdiri dari sub-nets berukuran kecil dengan hanya sebuah hidden layer. 
+
+# 7. Model Lain
+Beberapa model lain yang cukup populer digunakan yaitu
+1. RCNN (Region Based CNN)
+2. GoogleNet
+3. AlexNet
+4. ResNet
+5. ResNeXt
+6. SegNet
+7. GAN (Generative Adversarial Network)
+8. SwueezeNet
+9. YOLO (Yoo Only Look Once)
+
+Penerapan Deep Learning pada dunia nyata sangat banyak, sebagian besar didominasi oleh pengenalan objek dan gambar (pengenalan mengenai image,face,object,medical image).
+
 
