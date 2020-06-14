@@ -51,14 +51,28 @@ Terdapat beberapa fungsi aktivasi seperti sigmoid, ReLu, Leaky ReLu, MaxOut, dan
 Salah satu cara pemilihan fungsi adalah bahwa ReLu tidak mengakomodir nilai negatif, sehingga hati-hati menggunakannya jika kita punya data bernilai negatif.
 
 # 2. Convolutional Neural Network (CNN)
-Secara prinsip, algoritma ini meniru visual cortex pada mamalia. Algoritma ini seolah-olah **mengambil bagian** yang penting-penting saja, misal wajah manusia akan dibagi menjadi beberapa titik fokus seperti hidung, telinga, mata, dan bibir. Sedangkan bagian selain tersebut tidak diambil.
+Merupakan salah satu bentuk dari ANN dimana algoritma ini meniru visual cortex pada mamalia. Algoritma ini seolah-olah **mengambil bagian** yang penting-penting saja, misal wajah manusia akan dibagi menjadi beberapa titik fokus seperti hidung, telinga, mata, dan bibir. Sedangkan bagian selain tersebut tidak diambil.
 
 Pengenalan pola pada suatu gambar kadangkala bisa dilihat dengan mengamati beberapa bagian saja. Hal ini mengakibatkan ukuran matriks akan berkurang sehingga tidak semua input akan dihubungkan ke layer. Hal ini tentunya akan mengurangi komputasi sehingga perhitungan menjadi lebih cepat. Oleh karena itulah, CNN sering dipakai/cocok digunakan untuk kasus **Computer Vision**.
 
 Salah satu perbedaan ANN dan CNN adalah pada CNN tidak semua input dipasangkan dengan layer. 
 
+## Convolutional Layer
+merupakan layer dari hasil modifikasi filter. 
+
+## Filter
+merupakan suatu alat (berupa matriks) yang digunakan untuk melakukan modifikasi matriks awal. Matriks Filter ini akan dikalikan dengan sub-matriks pada matriks X sehingga akan menghasilkan suatu matriks baru yang berukuran lebih kecil. 
+
+Misal dari suatu matriks X berukuran 5x5, jika digunakan filter berukuran 3x3 maka matriks X tersebut akan menjadi berukuran 4x4. 
+
 ## Max Pooling
-merupakan proses untuk **mengurangi resolusi gambar** dengan tetap mempertahankan informasi pada gambar (ibarat PCA).
+merupakan proses untuk **mengurangi resolusi gambar** dengan tetap mempertahankan informasi pada gambar (ibarat PCA) dengan perhitungan maximum.
+
+## Average Pooling
+merupakan proses untuk **mengurangi resolusi gambar** dengan tetap mempertahankan informasi pada gambar (ibarat PCA) dengan perhitugan rata-rata.
+
+## Ilustrasi CNN
+Bayangkan memiliki bidang tanah (matriks 100x100) kita punya senter yang bisa menerangi 3x3 petak. Senter ini bertindak seperti **filter**. Mula-mula senter akan menyinari petak pojok atas, kemudian dikalikan dengan
 
 
 # 3. Recurrent Neural Network (RNN)
@@ -90,5 +104,6 @@ Beberapa model lain yang cukup populer digunakan yaitu
 9. YOLO (Yoo Only Look Once)
 
 Penerapan Deep Learning pada dunia nyata sangat banyak, sebagian besar didominasi oleh pengenalan objek dan gambar (pengenalan mengenai image,face,object,medical image).
+
 
 
