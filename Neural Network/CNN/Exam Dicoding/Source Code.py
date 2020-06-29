@@ -91,8 +91,32 @@ def generateModel():
 
 model.fit(X,y,batch_size = 32,epochs=3,validation_split = 0.1)
 
+## Alternatif Model
+
+def generateModel():    
+    model = Sequential()
+
+    model.add(Conv2D(16,(3,3),input_shape=X.shape[1:]))
+    model.add(Activation("relu"))
+    model.add(MaxPool2D(pool_size=(2,2)))
+
+    model.add(Conv2D(32,(3,3)))
+    model.add(Activation("relu"))
+    model.add(MaxPool2D(pool_size=(2,2)))
+
+    model.add(Flatten())
+    model.add(Dense(512),)
+
+    model.add(Dense(1))
+    model.add(Activation('softmax'))
+
+    model.compile(loss="categorical_crossentropy",
+                optimizer="adam",
+                metrics=['accuracy'])
+    return model
 
 
+model.fit(X,y,batch_size = 32,epochs=3,validation_split = 0.1)
 
 
 
@@ -130,3 +154,18 @@ history = dnet.fit(
 1. https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-cnn-deep-learning-99760835f148
 2. https://towardsdatascience.com/building-a-rock-paper-scissors-ai-using-tensorflow-and-opencv-d5fc44fc8222
 """
+
+
+## ALTERNATIF
+data_dir = '/content/gdrive/My Drive/DATASET/Rock-Paper-Scissors/Train'
+categories = ['paper','rock','scissors']
+
+data_train = ImageDataGenerator(
+	rescale=1./225,
+	rotation_range=20,
+	horizontal_flip=True,
+	shear_range=0.2,
+	fill_mode='wrap',
+	validation_split = 0.2
+	)
+
