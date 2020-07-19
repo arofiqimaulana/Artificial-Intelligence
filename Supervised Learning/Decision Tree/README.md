@@ -23,3 +23,8 @@ adalah suatu ukuran seberapa efektif suatu atribut dalam mengklasifikasikan data
 adalah selisih E(S) - I(S) atau bisa dikatakan Entropy Variabel dikurangi Average Weighted Entropy tiap kelas.
 
 Information Gain yang paling tinggi akan dijadikan sebagai Root Node.
+
+
+### Refference
+1. https://scikit-learn.org/stable/modules/tree.html
+2. https://www.datacamp.com/community/tutorials/decision-tree-classification-python
