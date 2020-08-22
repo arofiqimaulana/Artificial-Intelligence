@@ -11,6 +11,11 @@ komputer tidak mengandalkan aturan–aturan yang diprogram oleh manusia, namun k
 tersebut. Pola–pola inilah yang “dipelajari” oleh komputer dan menjadi acuan
 saat sistem AI digunakan. 
 
+### Cabang Machine Learning
+1. Supervised Learning (Learn Through Label Data)
+2. Unsupersived Learning (Doesnt Learn Through Label Data)
+3. Reinforcement Learning (Learn Through Consequence of Action/Interact with Environment)
+
 Berdasarkan kegunaannya, AI dibagi menjadi 
 1. Computer vision <br/>
 adalah cabang teknologi AI yang memiliki fokus untuk mengolah gambar dari foto, video, atau langsung dari kamera. 
