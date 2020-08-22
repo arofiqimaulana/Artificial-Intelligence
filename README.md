@@ -24,5 +24,45 @@ kemampuan meniru manusia dalam berbicara dan berbahasa (suara sebagai input). Co
 4. Robotics <br/>
 memiliki fokus untuk membangun mesin fisik untuk menjalankan berbagai fungsi yang sebelumnya membutuhkan keterampilan tangan manusia.
 
+## Summary Code
+
+
+1. Supervised Learning
+Persiapan dataset untuk data train dan data test yaitu
+```
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=.33)
+```
+Beberapa Algoritma yang bisa digunakan
+```
+from sklearn.model_selection import StratifiedKFold, cross_val_score,GridSearchCV
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import accuracy_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import GaussianNB
+from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+```
+Build Model
+```
+model = LinearRegression()
+model = LogisticRegression()
+model = RandomForestClassifier()
+```
+Train Model
+``` 
+fit = model.fit(X_train,y_train)
+predictions = model.predict(X_test)
+```
+Evaluasi Model
+```
+from sklearn.metrics import mean_squared_error
+print ('RMSE: ', mean_squared_error(y_test, predictions))
+akurasi=cross_val_score(model, Xtrain, y_train,cv=cv)
+```
+
+
 ### Source
 Skill Academy Cource (https://skillacademy.com/)
