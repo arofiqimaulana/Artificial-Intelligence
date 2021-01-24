@@ -31,5 +31,5 @@ Ragam sisaan harus konstan. Teknik pengujian yang dapat dipakai adalah Uji Breus
 Tidak boleh terjadi korelasi antar sisaan. Teknik pengujian yang dapat dipakai adalah Uji Durbin Watson
 
 # Flowchart
-![](images/ml_flowchart.png)
+![](images/flowchart.png)
 
