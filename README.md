@@ -36,11 +36,6 @@ memiliki fokus untuk membangun mesin fisik untuk menjalankan berbagai fungsi yan
 
 ## Summary Code
 
-Persiapan dataset untuk data train dan data test yaitu
-```
-from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42, test_size=.33)
-```
 Beberapa Algoritma yang bisa digunakan
 ```
 from sklearn.model_selection import StratifiedKFold, cross_val_score,GridSearchCV
