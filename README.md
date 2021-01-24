@@ -96,3 +96,7 @@ getROC_Curve(xgboost_fit)
 
 ## Flowchart
 ![](images/ml_flowchart.png)
+
+## Taksonomi
+![](images/taksonomi.png)
+
