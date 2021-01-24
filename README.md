@@ -100,3 +100,7 @@ getROC_Curve(xgboost_fit)
 ## Taksonomi
 ![](images/taksonomi.png)
 
+## Refference
+
+- Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
+
