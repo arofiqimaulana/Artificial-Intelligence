@@ -1,0 +1,16 @@
+# Boosting
+
+## Definition
+- Sesuai dengan namanya yaitu boosting, tujuannya adalah **mem-boosting data yang sebelumnya salah prediksi**. Oleh karena itu, resampling yang digunakan pada boosting adalah tidak secara acak, namun diberikan peluang yang berbeda. Data yang salah prediksi dari hasil sebelumnya mempunyai peluang terpilihnya semakin tinggi. Sehingga pada akhirnya akan didapatkan model yang bagus untuk semua data (tidak hanya di beberapa data saja)
+- The term ‘Boosting’ refers to a family of algorithms which converts weak learner to strong learners.
+
+- 
+
+
+
+## Flowchart
+![](images/flowchart.png)
+
+## Refference
+- Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
+- https://towardsdatascience.com/what-is-boosting-in-machine-learning-2244aa196682

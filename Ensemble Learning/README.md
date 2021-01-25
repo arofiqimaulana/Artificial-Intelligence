@@ -20,6 +20,9 @@ Teknik penggabungan sejumlah model ini dapat menggunakan
 3. Random Forest (several decision tree)
 4. Stacking
 
+## Bagging vs Boosting
+![](images/boosting_vs_bagging.png)
+
 ## Refference
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
 - https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
