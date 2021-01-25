@@ -26,3 +26,4 @@ Teknik penggabungan sejumlah model ini dapat menggunakan
 ## Refference
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
 - https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
+- https://www.edureka.co/blog/boosting-machine-learning/

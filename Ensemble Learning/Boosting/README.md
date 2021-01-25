@@ -9,7 +9,7 @@
 
 
 ## Flowchart
-![](images/flowchart.png)
+![](images/boosting.png)
 
 ## Refference
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
