@@ -13,7 +13,7 @@
 - Pada umumnya, 50 model independen sudah cukup untuk menghasilkan model gabungan yang memberikan kesalahan relatih rendah (Breiman 1996a). Penambahan jumlah model tunggl hingga 100 model tidak mampu lagi mereduksi kesalahan (Breiman 1996a).
 
 ## Flowchart
-![](images/bagging_flowchart.png)
+![](images/flowchart.png)
 
 ## Refference
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
