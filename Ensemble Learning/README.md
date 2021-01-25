@@ -2,7 +2,13 @@
 
 ## Definition
 Ensemble learning bisa dibilang sebagai pembelajaran menggunakan sistem demokrasi. Hal ini karena hasil prediksi menggunakan voting dari beberapa metode. Secara arti, jika kita lihat pengertian ensemble adalah
-a group of items viewed as a whole rather than individually.
+
+> a group of items viewed as a whole rather than individually
+
+Konsep dasar penting yang patut dipahami dalam Ensemble learning adalah **Boostrap**. Boostrap merupakan resamling with replacement yang artinya data yang terpilih bisa terpilih kembali, seperti ilustrasi di bawah ini
+
+![](images/boostrap.png)
+
 
 Ensemble learning dengan konsep majority voting hanya bekerja (memberikan akurasi maksimum) jika dan hanya jika 
 1. Setiap saling model saling independen, yang dilatih dengan himpunan data yang saling independen.
@@ -16,3 +22,4 @@ Teknik penggabungan sejumlah model ini dapat menggunakan
 
 ## Refference
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
+- https://towardsdatascience.com/ensemble-methods-bagging-boosting-and-stacking-c9214a10a205
