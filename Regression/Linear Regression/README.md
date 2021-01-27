@@ -1,5 +1,5 @@
 # ANALISIS REGRESI LINIER 
-Analisis regresi merupakan analisis data yang bertujuan untuk memodelkan hubungan antara variabel dependent dan variabel independent. Jika skala pengukuran variabel dependent adalah nominal dan ordinal, maka dia akan termasuk ke analisis regresi logistik . Model regresi linier dapat digambarkan sebagai berikut
+Analisis regresi merupakan analisis data yang bertujuan untuk memodelkan hubungan antara variabel dependent dan variabel independent. Jika skala pengukuran variabel dependent adalah nominal atau ordinal, maka dia akan termasuk ke analisis regresi logistik . Model regresi linier dapat digambarkan sebagai berikut
 
 `
 y = a * X1 + b * X2 + c * X3 + error
