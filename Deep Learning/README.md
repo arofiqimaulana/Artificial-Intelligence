@@ -105,8 +105,13 @@ Beberapa model lain yang cukup populer digunakan yaitu
 
 Penerapan Deep Learning pada dunia nyata sangat banyak, sebagian besar didominasi oleh pengenalan objek dan gambar (pengenalan mengenai image,face,object,medical image).
 
+# Image to Matriks
+![](images/image_to_matrix.png)
+
 # CNN Flowchart
 ![](Convolutional%20Neural%20Network%20(CNN)/images/flowchart.png)
+
+
 
 
 
