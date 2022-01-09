@@ -1,0 +1,62 @@
+---
+title: "Klasifikasi Bunga Menggunakan k-NN"
+author: "ARofiqi Maulana"
+date: "1/9/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import Data
+
+```{r import data}
+library(class)
+library(caTools)
+
+# import data
+df_iris = iris
+set.seed(123)
+```
+
+## View Data
+```{r view}
+head(df_iris)
+str(iris)
+levels(iris$Species)
+```
+## Split dataset into data train and data test
+
+```{r split data}
+df_iris$status = sample.split(df_iris,SplitRatio = 0.80)
+
+df_train = subset(df_iris,status==TRUE) # label TRUE = data train
+df_test = subset(df_iris,status==FALSE) # label FALSE = data test
+
+kolom_X = c('Sepal.Length','Sepal.Width','Petal.Length','Petal.Width')
+kolom_y = c('Species')
+
+X_train = df_train[kolom_X]
+y_train = df_train[kolom_y]
+X_test = df_test[kolom_X]
+y_test = df_test[kolom_y]
+```
+
+## Modelling using k-NN
+Akan digunakan 3 tetangga terdekat dalam pemodelan ini.
+```{r modelling}
+knn_result <- knn(train = X_train,test = X_test,cl=y_train$Species,k = 3,prob = TRUE)
+```
+
+# Evaluasi Model
+Hasil akurasi menggunakan k-nn sebesar 96% yang menandakan bahwa model memiliki akurasi yang tinggi.
+
+```{r evaluasi}
+real_prediksi = head(cbind(y_test,knn_result)) # real vs prediksi
+
+conf_matrix <- table(y_test$Species,knn_result) # Confusion Matrix
+accuracy <- sum(diag(conf_matrix))/sum(conf_matrix) # Akurasi Model
+
+accuracy
+```
