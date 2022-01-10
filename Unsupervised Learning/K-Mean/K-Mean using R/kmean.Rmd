@@ -1,0 +1,54 @@
+---
+title: "Clustering mtcars using k-mean"
+author: "ARofiqi Maulana"
+date: "1/10/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Algoritma K-Mean
+k-Mean termasuk dalam algoritma clustering yang berguna untuk membagi data menjadi beberapa cluster Algoritma ini termasuk dalam unsupervised learning yang berarti tidak butuh variabel dependent (Y). Huruf k disini menunjukkan banyaknya cluster yang dipilih.
+
+Prinsip kerja algoritma ini adalah mengelompokkan objek ke centroid terdekat. Centroid disini didapatkan dari pengambilan secara acak sebanyak k objek dari total n objek. Sehingga tahapan dari algoritma ini adalah
+
+1. Tentukan k buah cluster
+2. Pilih sejumlah k buah objek secara ajak yang akan dijadikan sebagai centroid cluster
+3. Tentukan k buah centroid (titik tengah)
+4. Kelompokkan objek ke centroid cluster terdekat berdasarkan jarak euclidian
+5. Hitung kembali semua nilai titik centroid
+6. Ulangi langkahb 3 s.d 5 sampai nilai titik centroid tidak berubah lagi
+
+## Load Package
+```{r load package}
+library(factoextra)
+library(ggplot2)
+```
+
+## Import Data
+Kita akan mengelompokkan mobil berdasarkan jarak tempuh, banyaknya silinder, banyaknya karburator dll
+```{r import data}
+df <- mtcars
+df
+```
+
+## Standardize
+```{r standardize}
+df <- scale(df)
+```
+
+## Clustering
+Kita akan mengelompokkan data mtcars ke dalam 4 cluster. Dimana kita akan melakukan 25 kali inisiasi centroid, kemudian dipilih yang terbaik.
+```{r clustering}
+km <- kmeans(df, centers = 4, nstart = 25)
+cbind(km$cluster)
+
+fviz_cluster(km, data = df)
+```
+
+## Prosedur Pengklasteran
+```{r prosedur}
+knitr::include_graphics("ProsedurPengklasteran.PNG")
+```
