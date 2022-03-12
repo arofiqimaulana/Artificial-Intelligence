@@ -1,3 +1,6 @@
+# Deep Learning
+Deep learning is a form of machine learning where a model has multiple layers of laten processes. Multilayer perceptron also known as Neural Network. Basically build up repeated aplication of logistic regression.
+
 # 1. Artificial Neural Network (ANN)
 Neural network merupakan salah satu bagian dari algortima machine learning. Algoritma ini terinspirasi dari cara kerja otak manusia. 
 
