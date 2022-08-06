@@ -6,7 +6,8 @@ Decision tree merupakan suatu struktur yang digunakan untuk membantu proses peng
 Pada prinsipnya data akan dikelompokkan dalam representasi graph tree. Sehingga, pertama-tama dilakukan adalah menentukan variabel kriteria/atribut/feature untuk menjadi root node dan tree. Pemilihan feature/atribut tersebut menggunakan Entropy dan Information Gain
 
 ## Algoritma
-Terdapat dua macam algoritma yang dapat digunakan untuk menyelesaikan permasalahan association rules.
+Beberapa algoritma yang dapat digunakan adalah
+
 1. ID3 <br>
 Algoritma ini menggunakan Information gain dalam penentuan atribut pemilah terbaik (the best split attribute).
 2. C4.5 <br>
@@ -31,8 +32,43 @@ Information gain mengukur seberapa banyak informasi suatu feature tentang kelasn
 
 Information Gain yang paling tinggi akan dijadikan sebagai Root Node.
 
+### 3. Gain Ratio
+merupakan perbandingan antara Gain dan split information. Gain ratio berfungsi untuk mengakomodasi perhitungan information gain yang kemungkinan menghasilkan bias. Bias ini bisa timbul jika banyaknya kategori = banyak observasi 
 
-### Refference
+### 4. Split Info
+Split info digunakan sebagai pembagi dari Gain(A) yang akan menghasilkan Gain Ratio.
+
+### 5. Gain Ratio
+Gain Ratio merupakan salah satu ukuran lain yang digunakan untuk mengatasi masalah pada atribut yang memiliki nilai sangat bervariasi.Gain Ratio tertinggi dipilih sebagai atribut test untuk simpul.
+
+## Formula
+
+#### 1. Entropy
+$$ E(S) = -\sum_{i=1}^{c} p_i \log _{2} p_i $$
+- c : banyak kelas
+- pi : peluang untuk kelas ke i 
+
+#### 2. Entropy pada masing-masing variabel
+$$ E_A(S) = \sum_{v} \frac{|S_v|}{|S|}Entropy(S_v) $$ 
+
+dimana
+- A : variabel
+- v : nilai yang mungkin untuk A
+- |S_v|: jumlah sampel untuk nilai v
+- |S| : Jumlah sampel untuk semua data
+- Entropy(S_v): Entropy untuk sampel yang memiliki nilai v
+
+#### 3. Information Gain
+$$ Gain(A) = Entropy(S) - Entropy_A(S)$$
+
+#### 4. Split Info
+$$ \textrm{SplitInfo}_A(D)=\sum_{j=1}^{v} \frac{|D_j|}{|D|}.log _{2}(\frac{|D_j|}{|D|}) $$
+
+#### 5. Gain Ratio
+$$ \textrm{GainRatio}(A) = \frac{Gain(A)}{\textrm{SplitInfo}_A(D)} $$
+
+## Refference
 1. https://scikit-learn.org/stable/modules/tree.html
 2. https://www.datacamp.com/community/tutorials/decision-tree-classification-python
 3. https://algorit.ma/blog/decision-tree-adalah-2022/
+4. https://muhammadilhammubarok.wordpress.com/2018/08/14/algoritma-c4-5/
