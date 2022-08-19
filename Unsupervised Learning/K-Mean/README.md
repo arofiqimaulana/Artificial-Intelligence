@@ -15,8 +15,5 @@ Tentukan k buah cluster
 
 Setiap cluster memiliki tikik pusat yang dikenal sebagai centroid. Pada awal pembentukan cluster, nilai centroid ditentukan secara random. Namun selanjutnya nilai centroid tersebut ditentukan berdasarkan rumus ini
 
-
-###### Centroid
-
 $$ \text{centroid} = \sum_{i=1}^{n} \frac{x_i}{n} $$ 
 
