@@ -9,10 +9,15 @@ Pada prinsipnya data akan dikelompokkan dalam representasi graph tree. Sehingga,
 Beberapa algoritma yang dapat digunakan adalah
 
 1. ID3 <br>
-Algoritma ini menggunakan Information gain dalam penentuan atribut pemilah terbaik (the best split attribute).
+Algoritma ini menggunakan **Information gain** dalam penentuan atribut pemilah terbaik (the best split attribute).
 2. C4.5 <br>
-Merupakan pengembangan dari algoritma ID3. Jika ID3 menggunakan Information gain, maka Algoritma C4.5 menggunakan Gain Ratio agar tidak bias dalam penentuan atribut pemilah terbaik (the best split attribute).
-3. Algoritma Multivariate Splitting <br>
+Merupakan pengembangan dari algoritma ID3. Jika ID3 menggunakan Information gain, maka Algoritma C4.5 menggunakan **Gain Ratio** agar tidak bias dalam penentuan atribut pemilah terbaik (the best split attribute).
+4. CART (Classification and Regression Trees) 
+sangat mirip dengan C4.5, tetapi berbeda karena mendukung variabel target numerik (regresi) dan tidak menghitung set aturan. CART membangun pohon biner menggunakan fitur dan ambang batas yang menghasilkan keuntungan informasi terbesar di setiap node.
+5. C5.0 <br>
+Merupakan penyempurnaan dari algoritma C4.5 dan ID3. Dalam proses pembentukan pohon keputusan, nilai **information gain**yang tertinggi akan terpilih sebagai root bagi node selanjutnya. 
+
+6. Algoritma Multivariate Splitting <br>
 Algoritma ID3 maupun C4.5, melakukan pengecekan untuk satu per satu variabel pada setiap simpul (yang bukan simpul daun). Hal ini disebut dengan univariate splitting. Metode univariate splitting yang menghasilkan garis pemisah seperti tangga yang relatif kaku, kurang fleksibel, dan sangat rentan salah untuk sampel-sampel data baru yang terdistribusi relatif acak, tidak teratur, membentuk area seperti anak-anak tangga.
 
 ## Terms
@@ -72,3 +77,6 @@ $$ \textrm{GainRatio}(A) = \frac{Gain(A)}{\textrm{SplitInfo}_A(D)} $$
 2. https://www.datacamp.com/community/tutorials/decision-tree-classification-python
 3. https://algorit.ma/blog/decision-tree-adalah-2022/
 4. https://muhammadilhammubarok.wordpress.com/2018/08/14/algoritma-c4-5/
+5. https://scikit-learn.org/stable/modules/tree.html#tree-algorithms-id3-c4-5-c5-0-and-cart
+6. https://scikit-learn.org/stable/auto_examples/tree/plot_cost_complexity_pruning.html#sphx-glr-auto-examples-tree-plot-cost-complexity-pruning-py
+7. https://github.com/serengil/chefboost
