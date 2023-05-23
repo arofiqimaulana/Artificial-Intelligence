@@ -26,3 +26,4 @@
 - Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
 - https://www.edureka.co/blog/boosting-machine-learning/
 - https://towardsdatascience.com/what-is-boosting-in-machine-learning-2244aa196682
+- https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari#:~:text=Beberapa%20perbedaan%20algoritma%20gradient%20boost,membangun%20stumps%20dengan%20dua%20daun.
