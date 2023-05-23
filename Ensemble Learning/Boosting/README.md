@@ -17,6 +17,7 @@
 - Gradient Boosting
 - Xtreme Gradient Boosting (XGBoost)
 - Light Gradient Boosting 
+- CatBoost
 
 ## Flowchart
 ![](images/boosting.png)
