@@ -20,3 +20,4 @@ Selain itu, teorema bayes juga digunakan untuk melakukan klasifikasi objek. Meto
 
 ## Reference
 - https://arofiqimaulana.com/naive-bayes-classifier/
+- http://imamcs.lecture.ub.ac.id/files/2015/02/Klasifikasi_II-_EJ_Fix_v3.pdf
