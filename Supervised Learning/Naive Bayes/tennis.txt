@@ -1,0 +1,14 @@
+1 Cerah Panas Tinggi Stabil Tidak
+2 Cerah Panas Tinggi Labil Tidak
+3 Mendung Panas Tinggi Stabil Ya
+4 Hujan Sedang Tinggi Stabil Ya
+5 Hujan Dingin Normal Stabil Ya
+6 Hujan Dingin Normal Labil Tidak
+7 Mendung Dingin Normal Labil Ya
+8 Cerah Dingin Tinggi Stabil Tidak
+9 Cerah Dingin Normal Stabil Ya
+10 Hujan Sedang Normal Stabil Ya
+11 Cerah Sedang Normal Labil Ya
+12 Mendung Sedang Tinggi Labil Ya
+13 Mendung Panas Normal Stabil Ya
+14 Hujan Sedang Tinggi Labil Tidak
