@@ -61,3 +61,10 @@ Dalam menguji model machine learning, terdapat beberapa metrik yang biasa diguna
 
 - Cross-Validation: Teknik untuk mengukur kinerja model dengan membagi data menjadi beberapa subset dan melakukan pelatihan serta pengujian berulang kali.
 - Learning Curve: Plot yang menunjukkan kinerja model terhadap jumlah data pelatihan untuk mengetahui apakah model memerlukan lebih banyak data atau apakah model menderita dari bias/variance tinggi.
+
+
+# Hands-On
+1. [Regresi OLS](https://github.com/arofiqimaulana/Artificial-Intelligence/blob/master/Evaluasi%20Model/Evaluasi%20Model%20Regresi.ipynb)
+2. [Classification](https://github.com/arofiqimaulana/Data-Event/blob/master/Jatim%20Camp/JatimCamp-master/Logistic_Regression_Telco.ipynb)
+3. [Clustering](https://github.com/arofiqimaulana/Artificial-Intelligence/blob/master/Unsupervised%20Learning/K-Mean/K-Mean%20using%20Python/clustering%20iris%20data.ipynb)
+4. [Forecasting](https://github.com/arofiqimaulana/Statistics/blob/master/Time%20Series%20Analysis/Univariate%20Time%20Series/ARIMA/Modeling.ipynb)
