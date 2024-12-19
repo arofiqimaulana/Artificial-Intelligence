@@ -15,7 +15,7 @@ komputer tidak mengandalkan aturan–aturan yang diprogram oleh manusia, namun k
 3. Reinforcement Learning (Learn Through Consequence of Action/Interact with Environment)
 4. Ensemble Learning (Democratic System)
 5. Instance-Based Learning 
-6. Deep Learning
+6. Deep Learning (Machine Learning with many layers)
 7. Bayesian Learning
 8. Nature Inspired Computing
 9. Artificial Neural Network
