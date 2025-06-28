@@ -1,60 +1,59 @@
-# Decision Tree
 
-## Pengertian	
+# 📘 Decision Tree
+
+## Pengertian
 Decision tree merupakan suatu struktur yang digunakan untuk membantu proses pengambilan keputusan. Disebut sebagai “tree” karena struktur ini menyerupai sebuah pohon lengkap dengan akar, batang, dan percabangannya.
 
 Pada prinsipnya data akan dikelompokkan dalam representasi graph tree. Sehingga, pertama-tama dilakukan adalah menentukan variabel kriteria/atribut/feature untuk menjadi root node dan tree. Pemilihan feature/atribut tersebut menggunakan Entropy dan Information Gain
 
 ## Algoritma
-Beberapa algoritma yang dapat digunakan adalah
+Beberapa algoritma yang dapat digunakan adalah:
 
-1. ID3 <br>
-Algoritma ini menggunakan **Information gain** dalam penentuan atribut pemilah terbaik (the best split attribute).
-2. C4.5 <br>
-Merupakan pengembangan dari algoritma ID3. Jika ID3 menggunakan Information gain, maka Algoritma C4.5 menggunakan **Gain Ratio** agar tidak bias dalam penentuan atribut pemilah terbaik (the best split attribute).
-4. CART (Classification and Regression Trees) 
-sangat mirip dengan C4.5, tetapi berbeda karena mendukung variabel target numerik (regresi) dan tidak menghitung set aturan. CART membangun pohon biner menggunakan fitur dan ambang batas yang menghasilkan keuntungan informasi terbesar di setiap node.
-5. C5.0 <br>
-Merupakan penyempurnaan dari algoritma C4.5 dan ID3. Dalam proses pembentukan pohon keputusan, nilai **information gain**yang tertinggi akan terpilih sebagai root bagi node selanjutnya. 
-
-6. Algoritma Multivariate Splitting <br>
-Algoritma ID3 maupun C4.5, melakukan pengecekan untuk satu per satu variabel pada setiap simpul (yang bukan simpul daun). Hal ini disebut dengan univariate splitting. Metode univariate splitting yang menghasilkan garis pemisah seperti tangga yang relatif kaku, kurang fleksibel, dan sangat rentan salah untuk sampel-sampel data baru yang terdistribusi relatif acak, tidak teratur, membentuk area seperti anak-anak tangga.
+1. **ID3**  
+   Algoritma ini menggunakan **Information gain** dalam penentuan atribut pemilah terbaik (the best split attribute).
+2. **C4.5**  
+   Merupakan pengembangan dari algoritma ID3. Jika ID3 menggunakan Information gain, maka Algoritma C4.5 menggunakan **Gain Ratio** agar tidak bias dalam penentuan atribut pemilah terbaik (the best split attribute).
+3. **CART (Classification and Regression Trees)**  
+   Sangat mirip dengan C4.5, tetapi berbeda karena mendukung variabel target numerik (regresi) dan tidak menghitung set aturan. CART membangun pohon biner menggunakan fitur dan ambang batas yang menghasilkan keuntungan informasi terbesar di setiap node.
+4. **C5.0**  
+   Merupakan penyempurnaan dari algoritma C4.5 dan ID3. Dalam proses pembentukan pohon keputusan, nilai **information gain** yang tertinggi akan terpilih sebagai root bagi node selanjutnya.
+5. **Algoritma Multivariate Splitting**  
+   Algoritma ID3 maupun C4.5, melakukan pengecekan untuk satu per satu variabel pada setiap simpul (yang bukan simpul daun). Hal ini disebut dengan univariate splitting. Metode univariate splitting yang menghasilkan garis pemisah seperti tangga yang relatif kaku, kurang fleksibel, dan sangat rentan salah untuk sampel-sampel data baru yang terdistribusi relatif acak, tidak teratur, membentuk area seperti anak-anak tangga.
 
 ## Terms
 
-### 1. Entropy 
-adalah suatu parameter yang mengukur tingkat keberagaman (heterogentias) dari suatu kumpulan data. Semakin heterogen, nilai entropy akan semakin besar. Jika Entropy = 0, maka Subset tersebut secara terklasifikasi secara sempurna.Atau dapat dikatakan bahwa subset tersebut hanya dimiliki oleh sampel positive saja atau sampel negatif saja. Atau dapat dikatakan juga bahwa subset yang memiliki nilai Entropy = 0, dia tidak perlu di split.
+### 1. Entropy
+Entropy adalah suatu parameter yang mengukur tingkat keberagaman (heterogenitas) dari suatu kumpulan data. Semakin heterogen, nilai entropy akan semakin besar. Jika Entropy = 0, maka Subset tersebut secara terklasifikasi secara sempurna. Atau dapat dikatakan bahwa subset tersebut hanya dimiliki oleh sampel positif saja atau sampel negatif saja. Atau dapat dikatakan juga bahwa subset yang memiliki nilai Entropy = 0, dia tidak perlu di split.
 
-Keadaan Entropy = 0 ini disebut dengan keadan pure set. Subset yang pure inilah yang akan menjadi patokan variabel apa
-yang akan menjadi root node. 
+Keadaan Entropy = 0 ini disebut dengan keadaan pure set. Subset yang pure inilah yang akan menjadi patokan variabel apa yang akan menjadi root node.
 
 Entropy ini bisa dihitung per variabel maupun per kategori....E(S)
 
 Entropy akan dihitung tiap kelas di setiap variabel. Nantinya, Entropy ini akan dilakukan weighted average sehingga setiap variabel akan mempunyai 1 nilai entropy.... I(S)
 
 ### 2. Information Gain
-Information gain mengukur seberapa banyak informasi suatu feature tentang kelasnya. adalah suatu ukuran seberapa efektif suatu atribut dalam mengklasifikasikan data. Secara matematis, Information Gain adalah selisih E(S) - I(S) atau bisa dikatakan Entropy Variabel dikurangi Average Weighted Entropy tiap kelas.
+Information gain mengukur seberapa banyak informasi suatu feature tentang kelasnya. Information Gain adalah suatu ukuran seberapa efektif suatu atribut dalam mengklasifikasikan data. Secara matematis, Information Gain adalah selisih E(S) - I(S) atau bisa dikatakan Entropy Variabel dikurangi Average Weighted Entropy tiap kelas.
 
 Information Gain yang paling tinggi akan dijadikan sebagai Root Node.
 
 ### 3. Gain Ratio
-merupakan perbandingan antara Gain dan split information. Gain ratio berfungsi untuk mengakomodasi perhitungan information gain yang kemungkinan menghasilkan bias. Bias ini bisa timbul jika banyaknya kategori = banyak observasi 
+Gain Ratio merupakan perbandingan antara Gain dan split information. Gain ratio berfungsi untuk mengakomodasi perhitungan information gain yang kemungkinan menghasilkan bias. Bias ini bisa timbul jika banyaknya kategori = banyak observasi
 
 ### 4. Split Info
 Split info digunakan sebagai pembagi dari Gain(A) yang akan menghasilkan Gain Ratio.
 
 ### 5. Gain Ratio
-Gain Ratio merupakan salah satu ukuran lain yang digunakan untuk mengatasi masalah pada atribut yang memiliki nilai sangat bervariasi.Gain Ratio tertinggi dipilih sebagai atribut test untuk simpul.
+Gain Ratio merupakan salah satu ukuran lain yang digunakan untuk mengatasi masalah pada atribut yang memiliki nilai sangat bervariasi. Gain Ratio tertinggi dipilih sebagai atribut test untuk simpul.
 
 ## Formula
 
 #### 1. Entropy
 $$ E(S) = -\sum_{i=1}^{c} p_i \log _{2} p_i $$
 - c : banyak kelas
-- pi : peluang untuk kelas ke i 
+- pi : peluang untuk kelas ke i
 
 #### 2. Entropy pada masing-masing variabel
-$$ E_A(S) = \sum_{v} \frac{|S_v|}{|S|}Entropy(S_v) $$ 
+$$ E_A(S) = \sum_{v} rac{|S_v|}{|S|}Entropy(S_v) $$ 
 
 dimana
 - A : variabel
@@ -67,10 +66,10 @@ dimana
 $$ Gain(A) = Entropy(S) - Entropy_A(S)$$
 
 #### 4. Split Info
-$$ \textrm{SplitInfo}_A(D)=\sum_{j=1}^{v} \frac{|D_j|}{|D|}.log _{2}(\frac{|D_j|}{|D|}) $$
+$$ 	extrm{SplitInfo}_A(D)=\sum_{j=1}^{v} rac{|D_j|}{|D|}.log _{2}(rac{|D_j|}{|D|}) $$
 
 #### 5. Gain Ratio
-$$ \textrm{GainRatio}(A) = \frac{Gain(A)}{\textrm{SplitInfo}_A(D)} $$
+$$ 	extrm{GainRatio}(A) = rac{Gain(A)}{	extrm{SplitInfo}_A(D)} $$
 
 ## Refference
 1. https://scikit-learn.org/stable/modules/tree.html
