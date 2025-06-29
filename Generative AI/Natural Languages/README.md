@@ -33,29 +33,32 @@
     - "dokumen" : rangkaian/susunan token
     - "corpora" : kumpulan dokumen
     - "topic" : distribusi dari beberapa kosakata yang bersifat tetap
+- Pengembangan dari PLSA yang lebih stabil dalam mengolah data dalam jumlah besar
+- LDA mengasumsikan bahwa satu dokumen terdapat lebih dari satu topik, yang masing masing merupakan distribusi melalui kosakata
+- Digunakan untuk analisis pada dokumen yang sangat besar
+- Digunakn untuk meringkas, pengelompokan, menghubungkan maupun memproses data
+- Merupakan model probabilistik generatif dari suatu korpus
+- Ide dasar model LDA adalah suatu dokumen yang direpresentasikan sebagai model campuran dari berbagai topik yang dapat disebut juga laten, setiap topik dikarekterisasikan oleh kata.
+- Terdapat variabel laten yang dapat menjelaskan variabel teramati
+    - Variabel teramati : dokumen
+    - Variabel latent : topik
+- Cara kerja LDA adalah memasukkan kumpulan dokuemn dan beberapa parameter yang ditentukan -> dilakukan LDA -> yang menghasilkan model yang terdiri dari bobot yang dapat dinormalisasi terhadap probabilitas.
+- Probabilistik muncul dalam 2 jenis
+    - Probabilitas bahwa dokumen tertentu menghasilkan topik tertentu pada suatu posisi
+    - Probabilitas bahwa topik tertentu menghasilkan kata tertentu dari kumpulan perbendaharaan kata
+- Berapa jumlah topic yang seharusnya dipakai diperoleh dari trial dan error maupun menggunakan topic coherence
+
+## Topic Modeling
 - Teknik yang bisa digunakan dalam topic modeling
-1. VSM (Vector Space Model)
-    ○ LSA (Latent Semantic Analysis)
-    ○ PLSA (Probabilistic Latent Semantic Analysis)
-    ○ LDA (Latent Dirichlet Allocation)
-    ○ Pengembangan dari PLSA yang lebih stabil dalam mengolah data dalam jumlah besar
-    ○ LDA mengasumsikan bahwa satu dokumen terdapat lebih dari satu topik, yang masing masing merupakan distribusi melalui kosakata
-    ○ Digunakan untuk analisis pada dokumen yang sangat besar
-    ○ Digunakn untuk meringkas, pengelompokan, menghubungkan maupun memproses data
-    ○ Merupakan model probabilistik generatif dari suatu korpus
-    ○ Ide dasar model LDA adalah suatu dokumen yang direpresentasikan sebagai model campuran dari berbagai topik yang dapat disebut juga laten, setiap topik dikarekterisasikan oleh kata.
-    ○ Terdapat variabel laten yang dapat menjelaskan variabel teramati
-        § Variabel teramati : dokumen
-        § Variabel latent : topik
-    ○ Cara kerja LDA adalah memasukkan kumpulan dokuemn dan beberapa parameter yang ditentukan -> dilakukan LDA -> yang menghasilkan model yang terdiri dari bobot yang dapat dinormalisasi terhadap probabilitas.
-    ○ Probabilistik muncul dalam 2 jenis
-        § Probabilitas bahwa dokumen tertentu menghasilkan topik tertentu pada suatu posisi
-        § Probabilitas bahwa topik tertentu menghasilkan kata tertentu dari kumpulan perbendaharaan kata
-    ○ Berapa jumlah topic yang seharusnya dipakai diperoleh dari trial dan error maupun menggunakan topic coherence
-- Topic Modeling
-    ○ Bertujuan untuk menemukan suatu topik yang tersembunyi dari rangkaian kata pada dokumen yang tidak terstruktur
-    ○ Teknik ini menganalisis dari teks asli, bagaimana topik-topik saling terhubung dengan satu yang lain, bagaimana tema-tema bisa berubah dari waktu ke waktu
-- Topic Coherence
+    - VSM (Vector Space Model)
+    - LSA (Latent Semantic Analysis)
+    - PLSA (Probabilistic Latent Semantic Analysis)
+    - LDA (Latent Dirichlet Allocation)
+- Bertujuan untuk menemukan suatu topik yang tersembunyi dari rangkaian kata pada dokumen yang tidak terstruktur
+- Teknik ini menganalisis dari teks asli, bagaimana topik-topik saling terhubung dengan satu yang lain, bagaimana tema-tema bisa berubah dari waktu ke waktu
+
+## Topic Coherence
+Mengukur sejauh mana topik-topik dalam model LDA berkaitan dengan kata-kata dalam dokumen yang sesuai.
         
 
 
