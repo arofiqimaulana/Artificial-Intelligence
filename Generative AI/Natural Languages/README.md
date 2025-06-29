@@ -8,31 +8,33 @@
 
 
 ## Vector Space Model (VSM)
-    ○ VSM dilakukan dengan merepresentasikan setiap dokumen dalam bentuk vektor -> tingkat kemiripan antar dokumen dilakukan dengan menghitung penyimpandan sudut antar vektor
-    ○ VSM bekerja dengan melihat kecocokan term (term similaritu) antara query dan corpus
-    ○ VSM tidak mampu menangani masalah sinonim 
-    ○ Akurasi perhitungan similarity menjadi rendah karena dokumen direpresentasikan ke dalam dimensi ruang besar (space) dan jarang (sparse)
+- VSM dilakukan dengan merepresentasikan setiap dokumen dalam bentuk vektor -> tingkat kemiripan antar dokumen dilakukan dengan menghitung penyimpandan sudut antar vektor
+- VSM bekerja dengan melihat kecocokan term (term similaritu) antara query dan corpus
+- VSM tidak mampu menangani masalah sinonim 
+- Akurasi perhitungan similarity menjadi rendah karena dokumen direpresentasikan ke dalam dimensi ruang besar (space) dan jarang (sparse)
+
 ## Latent Semantic Analysis (LSA)
-    ○ Pengembangan dari metode VSM (mengatasi masalah sinonim)
-    ○ Salah satu topic modeling yang merepresentasikan dokumen ke dalam ruang topik (topic space)
-    ○ LSA mengambil kata-kata penting dari informasi yang diberikan oleh dokumen dan menangkap kesamaan semantik antara kata-kata sehingga mampu menangani masalah sinonim
-    ○ LSA mereduksi dimensi ruang vektor sehingga punya kaurasi yang lebih daripada VSM
-    ○ Namnun LSA menyebabkan masalah polysemi
+- Pengembangan dari metode VSM (mengatasi masalah sinonim)
+- Salah satu topic modeling yang merepresentasikan dokumen ke dalam ruang topik (topic space)
+- LSA mengambil kata-kata penting dari informasi yang diberikan oleh dokumen dan menangkap kesamaan semantik antara kata-kata sehingga mampu menangani masalah sinonim
+- LSA mereduksi dimensi ruang vektor sehingga punya kaurasi yang lebih daripada VSM
+- Namnun LSA menyebabkan masalah polysemi
+
 ## Probabilistic Latent Semantic Analysis (PLSA)
-    ○ Algoritma yang diterapkan untuk memperkirakan makna sekumpulan teks menjadi suatu cluster atau kelompok tertentu sehingga mempermudah para analsis untuk menarik kesimpulan dari pengelompokan yang terbentuk
-    ○ Menggabungkan teori klasik tentang VSM, Singular Value Decomposition, model variabel latent untuk mendapatkan kelompok (latent) dari sekumpulan teks (bag of word)
-    ○ LSA dan PLSA mengabaikan urutan kata
+- Algoritma yang diterapkan untuk memperkirakan makna sekumpulan teks menjadi suatu cluster atau kelompok tertentu sehingga mempermudah para analsis untuk menarik kesimpulan dari pengelompokan yang terbentuk
+- Menggabungkan teori klasik tentang VSM, Singular Value Decomposition, model variabel latent untuk mendapatkan kelompok (latent) dari sekumpulan teks (bag of word)
+- LSA dan PLSA mengabaikan urutan kata
 
 ## Latent Dirichlet Allocation (LDA)
 - Termasuk dalam topic modeling
 - Termasuk dalam soft/fuzzy clustering karena satu objek bisa mempunyai lebih dari satu topik
 - Konsep topic modeling terdiri dari "kata" , "dokumen" dan "corpora"
-    1. kata" : token
-    2. "dokumen" : rangkaian/susunan token
-    3. "corpora" : kumpulan dokumen
-    4. "topic" : distribusi dari beberapa kosakata yang bersifat tetap
+    - kata" : token
+    - "dokumen" : rangkaian/susunan token
+    - "corpora" : kumpulan dokumen
+    - "topic" : distribusi dari beberapa kosakata yang bersifat tetap
 - Teknik yang bisa digunakan dalam topic modeling
-    ○ VSM (Vector Space Model)
+1. VSM (Vector Space Model)
     ○ LSA (Latent Semantic Analysis)
     ○ PLSA (Probabilistic Latent Semantic Analysis)
     ○ LDA (Latent Dirichlet Allocation)
