@@ -1,81 +1,63 @@
+# 📊 Decision Tree - Panduan Lengkap
 
-# 📘 Decision Tree
+Decision Tree adalah salah satu algoritma **machine learning** yang digunakan untuk **klasifikasi dan regresi**. Algoritma ini bekerja seperti struktur pohon, di mana setiap node merepresentasikan kondisi berdasarkan fitur, dan cabangnya merepresentasikan hasil dari kondisi tersebut.
 
-## Pengertian
-Decision tree merupakan suatu struktur yang digunakan untuk membantu proses pengambilan keputusan. Disebut sebagai “tree” karena struktur ini menyerupai sebuah pohon lengkap dengan akar, batang, dan percabangannya.
+---
 
-Pada prinsipnya data akan dikelompokkan dalam representasi graph tree. Sehingga, pertama-tama dilakukan adalah menentukan variabel kriteria/atribut/feature untuk menjadi root node dan tree. Pemilihan feature/atribut tersebut menggunakan Entropy dan Information Gain
+## 🧠 Apa Itu Decision Tree?
 
-## Algoritma
-Beberapa algoritma yang dapat digunakan adalah:
+Decision Tree adalah model prediktif yang memetakan observasi dari sebuah item ke kesimpulan mengenai target nilai item tersebut. Biasanya digunakan dalam supervised learning.
 
-1. **ID3**  
-   Algoritma ini menggunakan **Information gain** dalam penentuan atribut pemilah terbaik (the best split attribute).
-2. **C4.5**  
-   Merupakan pengembangan dari algoritma ID3. Jika ID3 menggunakan Information gain, maka Algoritma C4.5 menggunakan **Gain Ratio** agar tidak bias dalam penentuan atribut pemilah terbaik (the best split attribute).
-3. **CART (Classification and Regression Trees)**  
-   Sangat mirip dengan C4.5, tetapi berbeda karena mendukung variabel target numerik (regresi) dan tidak menghitung set aturan. CART membangun pohon biner menggunakan fitur dan ambang batas yang menghasilkan keuntungan informasi terbesar di setiap node.
-4. **C5.0**  
-   Merupakan penyempurnaan dari algoritma C4.5 dan ID3. Dalam proses pembentukan pohon keputusan, nilai **information gain** yang tertinggi akan terpilih sebagai root bagi node selanjutnya.
-5. **Algoritma Multivariate Splitting**  
-   Algoritma ID3 maupun C4.5, melakukan pengecekan untuk satu per satu variabel pada setiap simpul (yang bukan simpul daun). Hal ini disebut dengan univariate splitting. Metode univariate splitting yang menghasilkan garis pemisah seperti tangga yang relatif kaku, kurang fleksibel, dan sangat rentan salah untuk sampel-sampel data baru yang terdistribusi relatif acak, tidak teratur, membentuk area seperti anak-anak tangga.
+Contohnya mirip seperti proses pengambilan keputusan:  
+"Kalau hujan → bawa payung; kalau tidak → tidak usah bawa."
 
-## Terms
+---
 
-### 1. Entropy
-Entropy adalah suatu parameter yang mengukur tingkat keberagaman (heterogenitas) dari suatu kumpulan data. Semakin heterogen, nilai entropy akan semakin besar. Jika Entropy = 0, maka Subset tersebut secara terklasifikasi secara sempurna. Atau dapat dikatakan bahwa subset tersebut hanya dimiliki oleh sampel positif saja atau sampel negatif saja. Atau dapat dikatakan juga bahwa subset yang memiliki nilai Entropy = 0, dia tidak perlu di split.
+## 🔄 Jenis Algoritma Decision Tree
 
-Keadaan Entropy = 0 ini disebut dengan keadaan pure set. Subset yang pure inilah yang akan menjadi patokan variabel apa yang akan menjadi root node.
+| Algoritma        | Penjelasan Singkat |
+|------------------|--------------------|
+| **ID3 (Iterative Dichotomiser 3)** | Menggunakan **entropy** dan **information gain** untuk membangun tree. Cocok untuk data kategorikal. |
+| **C4.5**         | Penyempurnaan ID3. Menggunakan **gain ratio** dan bisa menangani data numerik. |
+| **CART (Classification and Regression Tree)** | Menggunakan **Gini Index** sebagai pengukuran, mendukung klasifikasi dan regresi. |
+| **CHAID**        | Cocok untuk data nominal, menggunakan chi-square untuk split. |
 
-Entropy ini bisa dihitung per variabel maupun per kategori....E(S)
+---
 
-Entropy akan dihitung tiap kelas di setiap variabel. Nantinya, Entropy ini akan dilakukan weighted average sehingga setiap variabel akan mempunyai 1 nilai entropy.... I(S)
+## ⚖️ Perbandingan Algoritma Decision Tree
 
-### 2. Information Gain
-Information gain mengukur seberapa banyak informasi suatu feature tentang kelasnya. Information Gain adalah suatu ukuran seberapa efektif suatu atribut dalam mengklasifikasikan data. Secara matematis, Information Gain adalah selisih E(S) - I(S) atau bisa dikatakan Entropy Variabel dikurangi Average Weighted Entropy tiap kelas.
+| Kriteria        | ID3            | C4.5           | CART            |
+|-----------------|----------------|----------------|-----------------|
+| Split Metric    | Information Gain | Gain Ratio     | Gini Index      |
+| Output          | Multi-way Tree | Multi-way Tree | Binary Tree     |
+| Data Type       | Kategorikal     | Campuran       | Campuran        |
+| Pruning         | Tidak ada       | Ada            | Ada             |
 
-Information Gain yang paling tinggi akan dijadikan sebagai Root Node.
+---
 
-### 3. Gain Ratio
-Gain Ratio merupakan perbandingan antara Gain dan split information. Gain ratio berfungsi untuk mengakomodasi perhitungan information gain yang kemungkinan menghasilkan bias. Bias ini bisa timbul jika banyaknya kategori = banyak observasi
+## 📚 Istilah Penting dalam Decision Tree
 
-### 4. Split Info
-Split info digunakan sebagai pembagi dari Gain(A) yang akan menghasilkan Gain Ratio.
+| Istilah            | Penjelasan |
+|--------------------|------------|
+| **Entropy**        | Mengukur ketidakpastian dalam data. Semakin tinggi, semakin acak. |
+| **Information Gain** | Mengukur seberapa banyak "informasi" yang diperoleh dari membagi data berdasarkan fitur tertentu. |
+| **Gain Ratio**     | Perbaikan dari Information Gain yang mempertimbangkan jumlah cabang dari split. |
+| **Gini Index**     | Alternatif dari entropy, mengukur ketidaksamaan suatu dataset. |
+| **Overfitting**    | Ketika pohon terlalu kompleks dan tidak bisa digeneralisasikan ke data baru. |
+| **Pruning**        | Proses mengurangi ukuran tree agar lebih sederhana dan menghindari overfitting. |
 
-### 5. Gain Ratio
-Gain Ratio merupakan salah satu ukuran lain yang digunakan untuk mengatasi masalah pada atribut yang memiliki nilai sangat bervariasi. Gain Ratio tertinggi dipilih sebagai atribut test untuk simpul.
+---
 
-## Formula
+## 🧪 Kapan Menggunakan Decision Tree?
 
-#### 1. Entropy
-$$ E(S) = -\sum_{i=1}^{c} p_i \log _{2} p_i $$
-- c : banyak kelas
-- pi : peluang untuk kelas ke i
+- Saat interpretabilitas model penting.
+- Ketika dataset memiliki kombinasi fitur kategorikal dan numerik.
+- Untuk baseline model yang cepat dibangun.
 
-#### 2. Entropy pada masing-masing variabel
-$$ E_A(S) = \sum_{v} rac{|S_v|}{|S|}Entropy(S_v) $$ 
+---
 
-dimana
-- A : variabel
-- v : nilai yang mungkin untuk A
-- |S_v|: jumlah sampel untuk nilai v
-- |S| : Jumlah sampel untuk semua data
-- Entropy(S_v): Entropy untuk sampel yang memiliki nilai v
+## 📘 Referensi Tambahan
 
-#### 3. Information Gain
-$$ Gain(A) = Entropy(S) - Entropy_A(S)$$
+- [Scikit-learn DecisionTreeClassifier Documentation](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html)
+- [Wikipedia: Decision Tree](https://en.wikipedia.org/wiki/Decision_tree_learning)
 
-#### 4. Split Info
-$$ 	extrm{SplitInfo}_A(D)=\sum_{j=1}^{v} rac{|D_j|}{|D|}.log _{2}(rac{|D_j|}{|D|}) $$
-
-#### 5. Gain Ratio
-$$ 	extrm{GainRatio}(A) = rac{Gain(A)}{	extrm{SplitInfo}_A(D)} $$
-
-## Refference
-1. https://scikit-learn.org/stable/modules/tree.html
-2. https://www.datacamp.com/community/tutorials/decision-tree-classification-python
-3. https://algorit.ma/blog/decision-tree-adalah-2022/
-4. https://muhammadilhammubarok.wordpress.com/2018/08/14/algoritma-c4-5/
-5. https://scikit-learn.org/stable/modules/tree.html#tree-algorithms-id3-c4-5-c5-0-and-cart
-6. https://scikit-learn.org/stable/auto_examples/tree/plot_cost_complexity_pruning.html#sphx-glr-auto-examples-tree-plot-cost-complexity-pruning-py
-7. https://github.com/serengil/chefboost
