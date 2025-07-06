@@ -121,12 +121,6 @@ Model deep learning modular di mana beberapa neural network kecil (sub-nets) dis
 
 ---
 
-## Image to Matriks
-![](images/image_to_matrix.PNG)
-
-## CNN Flowchart
-![](Convolutional%20Neural%20Network%20(CNN)/images/flowchart.png)
-
 ## 📘 Referensi
 - Ian Goodfellow, Yoshua Bengio, Aaron Courville. *Deep Learning*.
 - [CS231n - Stanford University](https://cs231n.github.io/)
