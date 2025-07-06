@@ -19,8 +19,10 @@ Contohnya mirip seperti proses pengambilan keputusan:
 |------------------|--------------------|
 | **ID3 (Iterative Dichotomiser 3)** | Menggunakan **entropy** dan **information gain** untuk membangun tree. Cocok untuk data kategorikal. |
 | **C4.5**         | Penyempurnaan ID3. Menggunakan **gain ratio** dan bisa menangani data numerik. |
+| **C5.0**         | Penyempurnaan dari algoritma C4.5 dan ID3. |
 | **CART (Classification and Regression Tree)** | Menggunakan **Gini Index** sebagai pengukuran, mendukung klasifikasi dan regresi. |
 | **CHAID**        | Cocok untuk data nominal, menggunakan chi-square untuk split. |
+
 
 ---
 
