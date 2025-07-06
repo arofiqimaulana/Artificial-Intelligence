@@ -2,7 +2,7 @@
 
 adalah metode ensemble yang menggabungkan banyak model pembelajaran sederhana (biasanya Decision Tree) untuk menghasilkan model yang lebih kuat. Gradient Boosting bekerja dengan cara membangun model secara bertahap, dimana setiap model baru memperbaiki kesalahan dari model sebelumnya.
 
-## Bagaimana Gradient Boosting Bekerja?
+## 🛠️ Cara Kerja
 
 Proses Gradient Boosting dapat dijelaskan dalam beberapa langkah sebagai berikut:
 
@@ -16,7 +16,7 @@ Proses Gradient Boosting dapat dijelaskan dalam beberapa langkah sebagai berikut
 - **Fokus pada kesalahan**: Setiap model baru belajar untuk memperbaiki kesalahan yang dibuat oleh model sebelumnya.
 - **Penurunan Gradien**: Proses ini mengurangi kesalahan iteratif dengan menggunakan algoritma penurunan gradien untuk mengarahkan model menuju minimum kesalahan yang optimal.
 
-## Kelebihan dan Kekurangan Gradient Boosting
+## 📋 Kelebihan dan Kekurangan Gradient Boosting
 
 ### Kelebihan:
 1. **Akurasi Tinggi**: Gradient Boosting memiliki performa yang sangat baik, terutama untuk data yang kompleks dan tidak linier.
@@ -28,7 +28,7 @@ Proses Gradient Boosting dapat dijelaskan dalam beberapa langkah sebagai berikut
 2. **Tidak Mudah Dipahami**: Model Gradient Boosting cenderung lebih sulit untuk dipahami dan diinterpretasi, karena melibatkan banyak model pohon keputusan.
 3. **Overfitting**: Jika tidak diatur dengan benar, seperti penggunaan parameter yang tepat, Gradient Boosting bisa mengalami overfitting pada data pelatihan.
 
-## Implementasi Gradient Boosting
+## 📋 Implementasi Gradient Boosting
 
 Gradient Boosting sering digunakan dengan pustaka Python seperti **Scikit-learn**, **XGBoost**, **LightGBM**, dan **CatBoost**. Berikut adalah contoh implementasi dasar menggunakan Scikit-learn:
 
@@ -44,3 +44,4 @@ model.fit(X_train, y_train)
 
 # Prediksi
 predictions = model.predict(X_test)
+```
