@@ -1,29 +1,25 @@
-# Boosting
+# Algoritma Boosting dalam Machine Learning
 
-## Definition
-- Sesuai dengan namanya yaitu boosting, tujuannya adalah **mem-boosting data yang sebelumnya salah prediksi**. Oleh karena itu, resampling yang digunakan pada boosting adalah tidak secara acak, namun diberikan peluang yang berbeda. Data yang salah prediksi dari hasil sebelumnya mempunyai peluang terpilihnya semakin tinggi. Sehingga pada akhirnya akan didapatkan model yang bagus untuk semua data (tidak hanya di beberapa data saja)
-- The term ‘Boosting’ refers to a family of algorithms which converts weak learner to strong learners.
+Boosting adalah teknik dalam **ensemble learning** yang menggabungkan banyak model lemah (weak learners) untuk membentuk model yang kuat. Berikut ini adalah beberapa algoritma boosting yang paling populer:
 
-## How the algorithm works:
+## ✅ Daftar Algoritma Boosting
 
-- Step 1: The base algorithm reads the data and assigns equal weight to each sample observation.
+| Nama Algoritma | Penjelasan Singkat |
+|----------------|---------------------|
+| **AdaBoost (Adaptive Boosting)** | Menggabungkan beberapa model lemah (biasanya decision tree stump) secara iteratif, fokus pada kesalahan sebelumnya. |
+| **Gradient Boosting (GB)** | Menggunakan pendekatan gradient descent untuk meminimalkan loss. Tiap model baru belajar dari kesalahan model sebelumnya. |
+| **XGBoost (Extreme Gradient Boosting)** | Versi upgrade dari Gradient Boosting, lebih cepat dan efisien. Populer karena performa tinggi di kompetisi data science. |
+| **LightGBM (Light Gradient Boosting Machine)** | Dibuat oleh Microsoft. Lebih cepat dari XGBoost untuk dataset besar, menggunakan histogram-based algorithm. |
+| **CatBoost (Categorical Boosting)** | Dikembangkan oleh Yandex. Dirancang untuk menangani data kategorikal secara otomatis dan efisien. |
+| **Gradient Boosted Regression Trees (GBRT)** | Nama lain untuk gradient boosting, khusus untuk regresi. |
+| **Stochastic Gradient Boosting** | Variasi dari GB yang menggunakan subset data (stochastic) untuk menghindari overfitting. |
+| **Histogram-Based Gradient Boosting** | Versi lebih efisien dari GB, digunakan dalam LightGBM dan scikit-learn (`HistGradientBoosting`). |
 
-- Step 2: False predictions made by the base learner are identified. In the next iteration, these false predictions are assigned to the next base learner with a higher weightage on these incorrect predictions.
+## ⚠️ Catatan
+Semua algoritma di atas menggunakan prinsip dasar yang sama: **memperbaiki kesalahan dari model sebelumnya**, namun berbeda dalam cara training, optimasi, dan penanganan data.
 
-- Step 3: Repeat step 2 until the algorithm can correctly classify the output.
+### Tips:
+- Gunakan **XGBoost** untuk performa tinggi di kompetisi.
+- Gunakan **LightGBM** jika dataset sangat besar dan butuh kecepatan.
+- Gunakan **CatBoost** untuk data dengan banyak fitur kategorikal.
 
-## Algorithms List
-- Adaptive Boosting (AdaBoost)
-- Gradient Boosting
-- Xtreme Gradient Boosting (XGBoost)
-- Light Gradient Boosting 
-- CatBoost
-
-## Flowchart
-![](images/boosting.png)
-
-## Refference
-- Suyanto. 2018. Machine Learning Tingkat Dasar dan Lanjut. Informatika. Bandung.
-- https://www.edureka.co/blog/boosting-machine-learning/
-- https://towardsdatascience.com/what-is-boosting-in-machine-learning-2244aa196682
-- https://dqlab.id/algoritma-machine-learning-yang-perlu-dipelajari#:~:text=Beberapa%20perbedaan%20algoritma%20gradient%20boost,membangun%20stumps%20dengan%20dua%20daun.
