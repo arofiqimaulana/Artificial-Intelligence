@@ -23,14 +23,14 @@ ID3 membangun pohon keputusan dari dataset berlabel menggunakan **Information Ga
 ## 📚 Rumus Penting
 
 ### Entropy:
-\[
+$$
 Entropy(S) = - \sum p_i \log_2(p_i)
-\]
+$$
 
 ### Information Gain:
-\[
+$$
 Gain(S, A) = Entropy(S) - \sum \left( \frac{|S_v|}{|S|} \times Entropy(S_v) \right)
-\]
+$$
 
 ---
 
