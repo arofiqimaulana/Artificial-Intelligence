@@ -15,9 +15,7 @@ Rentang nilai:
 ## 📐 Rumus Silhouette untuk 1 titik data
 Untuk suatu titik \( i \):
 
-\[
-s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
-\]
+$$ s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}} $$
 
 Keterangan:
 - \( a(i) \) = rata-rata jarak titik \( i \) ke semua titik dalam cluster yang sama (**intra-cluster distance**)
