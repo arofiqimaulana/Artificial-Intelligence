@@ -73,8 +73,32 @@ plt.show()
 - Elbow tidak selalu jelas; jika sulit terlihat, pertimbangkan metrik lain seperti **Silhouette Score** atau **Gap Statistic**.
 - Jangan hanya bergantung pada Elbow — gunakan pemahaman domain.
 
+## 📊 Perbandingan
+
+| Aspek | Elbow Method | Silhouette Method |
+|-------|--------------|-------------------|
+| **Tujuan** | Menentukan jumlah cluster dengan melihat penurunan *Within-Cluster Sum of Squares* (WCSS) | Menilai kualitas clustering dengan mengukur seberapa dekat titik ke cluster-nya dibandingkan cluster terdekat lain |
+| **Metrik yang digunakan** | WCSS (*inertia*) = total kuadrat jarak dari setiap titik ke centroid cluster | Silhouette Score = rasio perbedaan jarak rata-rata dalam cluster sendiri (*a*) dan ke cluster terdekat (*b*) |
+| **Nilai hasil** | Tidak ada batas nilai baku, hanya melihat bentuk kurva | Rentang nilai: -1 sampai +1 |
+| **Cara interpretasi** | Cari titik “siku” pada grafik WCSS vs k, di mana penurunan mulai melambat | Nilai mendekati +1 = cluster jelas, 0 = di batas, <0 = salah penempatan |
+| **Kelebihan** | - Sederhana dan cepat\n- Mudah divisualisasi | - Memberi ukuran kualitas cluster yang jelas\n- Bisa membandingkan beberapa k secara objektif |
+| **Kekurangan** | - Siku kadang tidak jelas\n- Hanya berbasis WCSS, tidak melihat pemisahan antar cluster | - Lebih mahal secara komputasi untuk dataset besar\n- Tidak langsung memberi info “siku” |
+| **Kapan cocok dipakai** | Saat ingin estimasi awal jumlah cluster secara visual | Saat ingin mengukur dan membandingkan kualitas clustering untuk beberapa k |
+
+---
+
+## 📌 Kesimpulan
+- **Elbow** → fokus ke *jumlah cluster optimal* dari sudut *kompresi jarak dalam cluster*.
+- **Silhouette** → fokus ke *kualitas pemisahan cluster* antar data.
+
+📚 **Rekomendasi:** Gunakan keduanya secara bersamaan:  
+1. Gunakan **Elbow** untuk estimasi awal jumlah cluster.  
+2. Gunakan **Silhouette** untuk memvalidasi kualitas cluster tersebut.
+
 ---
 
 ## 📚 Referensi
 - Kodinariya, T.M. & Makwana, P.R. (2013). *Review on determining number of Cluster in K-Means Clustering*. International Journal of Advance Research in Computer Science and Management Studies.
 - [Scikit-learn KMeans](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
+- Rousseeuw, P.J. (1987). *Silhouettes: a graphical aid to the interpretation and validation of cluster analysis*. Journal of Computational and Applied Mathematics, 20, 53–65.
+- Kodinariya, T.M. & Makwana, P.R. (2013). *Review on determining number of Cluster in K-Means Clustering*. International Journal of Advance Research in Computer Science and Management Studies.
