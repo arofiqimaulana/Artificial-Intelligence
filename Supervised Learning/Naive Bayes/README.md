@@ -1,23 +1,65 @@
-## Teorema Bayes
-Teorema bayes menjelaskan mengenai peluang suatu kejadian berdasarkan pengetahuan awal (prior) dari kondisi yang mungkin berhubungan dengan kejadian tersebut. 
+# 🤖 Naive Bayes - Penjelasan dan Implementasi
 
-Contohnya, jika penyakit diabetes berhubungan dengan umur, maka peluang seseorang terjangkit diabetes akan lebih akurat jika dimasukkan faktor umur di dalamnya. Secara matematis, teorema bayes dituliskan sebagai berikut.
+## 📌 Deskripsi
 
-$$
-P(A|B) = \frac{P(B|A)}{P(B)}
-$$
+**Naive Bayes** adalah algoritma klasifikasi berbasis probabilistik yang menggunakan **Teorema Bayes** dengan asumsi "naive" (sederhana), yaitu bahwa setiap fitur pada data saling bebas (independen). Meskipun asumsi ini jarang berlaku di dunia nyata, algoritma ini terbukti sangat efektif dalam banyak aplikasi, terutama dalam pemrosesan teks seperti **klasifikasi email spam**, **analisis sentimen**, dan lainnya.
+
+## 🧠 Konsep Dasar
+
+- Berdasarkan **Teorema Bayes**:
+
+P(C|X) = P(X|C) * P(C) / P(X)
 
 
-- P(A|B) = Peluang terjadinya A jika B terjadi
-- P(B|A) = Peluang B terjadi saat A muncul
-- P(A) = Peluang terjadinya A tanpa memandang kejadian apapun.
-- P(B) = Peluang terjadinya B tanpa memandang kejadian apapun.
+Di mana:
+- `P(C|X)`: Probabilitas kelas C diberikan fitur X.
+- `P(X|C)`: Probabilitas fitur X diberikan kelas C.
+- `P(C)`: Probabilitas awal kelas C.
+- `P(X)`: Probabilitas awal fitur X.
 
-## Penerapan
-Penerapan teorema bayes di bidang statistika salah satunya diterapkan pada pendugaan parameter. Kita bisa menggunakan metode Bayesian MCMC untuk melakukan pendugaan parameter selain metode popular lainnya seperti OLS dan MLE. Metode OLS dan MLE memandang parameter sebagai konstanta sehingga dia tidak memiliki distribusi, sedangkan Bayesian menganggap parameter sebagai peubah acak sehingga dia memiliki distribusi.
+- **Naive Assumption**: Fitur-fitur dianggap independen satu sama lain.
 
-Selain itu, teorema bayes juga digunakan untuk melakukan klasifikasi objek. Metode ini sering dikenal sebagai Naive bayes Classifier. Dan kali ini akan dibahas penerapan teorema bayes untuk tujuan klasifikasi. Prinsip kerja metode ini adalah mengklasifikasikan objek berdasarkan peluang yang tertinggi diantara kelas lainnya.
+## ✅ Kelebihan
 
-## Reference
-- https://arofiqimaulana.com/naive-bayes-classifier/
-- http://imamcs.lecture.ub.ac.id/files/2015/02/Klasifikasi_II-_EJ_Fix_v3.pdf
+- Cepat dan efisien, bahkan pada dataset besar.
+- Tidak memerlukan banyak data untuk pelatihan.
+- Bekerja baik pada data kategorikal.
+- Mudah diimplementasikan dan diinterpretasikan.
+
+## ⚠️ Kekurangan
+
+- Asumsi independensi antar fitur jarang benar dalam kenyataan.
+- Kurang akurat dibanding algoritma kompleks pada data yang tidak memenuhi asumsi naive.
+
+## 🧪 Jenis Naive Bayes
+
+- **Gaussian Naive Bayes**: Untuk fitur numerik (distribusi normal).
+- **Multinomial Naive Bayes**: Umumnya digunakan untuk pemodelan teks.
+- **Bernoulli Naive Bayes**: Cocok untuk fitur biner (true/false).
+
+## 🔧 Implementasi Sederhana (Python)
+
+```python
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+
+# Load data
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Inisialisasi dan latih model
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+# Prediksi dan evaluasi
+y_pred = model.predict(X_test)
+print("Akurasi:", accuracy_score(y_test, y_pred))
+
+📚 Referensi
+- Scikit-learn: Naive Bayes
